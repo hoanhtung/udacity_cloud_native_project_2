@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: queue-env
+data:
+  KAFKA_SERVER: my-project-2-kafka.default.svc.cluster.local:9092
+  LOCATION_TOPIC_NAME: "location"
