@@ -1,0 +1,9 @@
+gRPC endpoints:
+- Location service
+
+Use proto file:
+- You can generate proto file in `scripts` folder with cmd: `bash gen_protos.sh`
+- After generating, you can see the files like *_pb2.py, *_pb2_grpc.py (here is Location)
+- And then, you can use resource from the files to import into gRPC service
+
+* Can use BloomRPC tool to test gRPC endpoints

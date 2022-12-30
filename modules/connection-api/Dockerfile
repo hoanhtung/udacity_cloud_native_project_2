@@ -3,11 +3,13 @@ FROM python:3.7-alpine
 WORKDIR .
 
 RUN apk add --no-cache gcc musl-dev linux-headers geos libc-dev postgresql-dev
-COPY ./location-service/requirements.txt requirements.txt
+COPY ./connection-api/requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
-EXPOSE 5005
+EXPOSE 5000
 
 COPY ./common ./common
-COPY ./location-service ./location-service
-CMD ["python", "location-service/main.py"]
+COPY ./connection-api ./connection-api
+
+WORKDIR ./connection-api
+CMD ["flask", "run", "--host", "0.0.0.0"]

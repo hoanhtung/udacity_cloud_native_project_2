@@ -1,3 +1,5 @@
 export default {
-  apiUrl: 'http://127.0.0.1:30001/api'
+  locationApiUrl: 'http://localhost:30001/api',
+  personApiUrl: 'http://localhost:30002/api',
+  connectionApiUrl: 'http://localhost:30003/api'
 }

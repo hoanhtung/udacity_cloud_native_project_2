@@ -2,8 +2,7 @@ import time
 from concurrent import futures
 import os
 import sys
-# Append parent directory to import path
-sys.path.append('../../modules')
+sys.path.append(os.path.abspath('../'))
 
 import grpc
 import common.proto.location_pb2 as location_pb2
@@ -53,7 +52,7 @@ def consume_message():
                 for topic_data, consumer_records in records.items():
                     for consumer_record in consumer_records:
                         print("Received message: " + str(consumer_record.value.decode('utf-8')))
-                        CreateLocation(json.loads(consumer_record.value.decode('utf-8')))
+                        create_location(json.loads(consumer_record.value.decode('utf-8')))
                 continue
             except Exception as e:
                 print(e)

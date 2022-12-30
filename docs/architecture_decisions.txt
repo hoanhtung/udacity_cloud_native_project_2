@@ -1,0 +1,8 @@
+UdaConnect App contains 6 modules:
+- Frontend: FE Web, call APIs using REST API
+- Person API: Handle logic code for person and provide person APIs for web
+- Connection APIs: Handle logic code for person and provide connection APIs for web
+- Location API: Provide location APIs for web
+- Location service: To handling ingress of a large volume of data like Location Resource, this service need a mechanism to reduce workload as well as transferring data quickly and lightweight.
+  Therefore, location data will be transferred to service via gRPC and this service will publish quickly message to queue (Kafka)
+- Location consumer service: This is a service that will subscribe message (Location data) queue to ensure stability and scaling.

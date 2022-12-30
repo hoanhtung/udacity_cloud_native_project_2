@@ -2,7 +2,7 @@ import time
 from concurrent import futures
 import os
 import sys
-sys.path.append('../../modules')
+sys.path.append(os.path.abspath('../'))
 
 import grpc
 import common.proto.location_pb2 as location_pb2
