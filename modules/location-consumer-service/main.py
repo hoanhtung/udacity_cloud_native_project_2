@@ -22,13 +22,13 @@ ENV = os.getenv("ENV", "test")
 config = config_by_name[ENV or "test"]
 engine = create_engine(config.SQLALCHEMY_DATABASE_URI)
 db = scoped_session(sessionmaker(bind=engine))
-
 def create_location(message):
-    print("Create Location | Start: {0}".message)
+    print("Create Location | Start: {0}", message)
+
     try:
         new_location = Location()
-        new_location.person_id = message["person_id"]
-        new_location.creation_time = datetime.fromtimestamp(message["creation_time"])
+        new_location.person_id = int(message["person_id"])
+        new_location.creation_time = datetime.strptime(message["creation_time"], "%Y-%m-%dT%H:%M:%S")
         new_location.coordinate = ST_Point(message["latitude"],message["longitude"])
         db.add(new_location)
         db.commit()

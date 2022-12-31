@@ -31,7 +31,7 @@ spec:
         service: location-service
     spec:
       containers:
-      - image: hoanhtung/location-service:2912-2
+      - image: hoanhtung/location-service:3112
         name: location-service
         env:
         - name: DB_USERNAME

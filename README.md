@@ -23,11 +23,10 @@ To run the application, you will need a K8s cluster running locally and to inter
 Quick way to deploy all services `kubectl apply -f deployment/`.
 
 ### Module Structure
-Contains 6 modules in system:
+Contains 5 modules in system:
 - `modules/frontend`: UdaConnect Web
-- `modules/person-api`: Provide person API endpoint
-- `modules/connection-api`: Provide connection API endpoint
-- `modules/location-api`: Provide location API endpoint
+- `modules/person-api`: a service to interact with Person resource (using RestAPI)
+- `modules/connection-api`: a service to interact with Connection resource (using RestAPI)
 - `modules/location-service`: a service to interact with Location resource (using gRPC)
 - `modules/location-consumer-service`: a consumer service to create new location (using message queue)
 
@@ -50,12 +49,6 @@ kubectl apply -f ./person-api/deployment.yaml
 docker build -t hoanhtung/udaconnect-connection-api:2912 -f ./api/Dockerfile .
 docker push hoanhtung/udaconnect-connection-api:2912
 kubectl apply -f ./connection-api/deployment.yaml
-```
-- `location-api`:
-```
-docker build -t hoanhtung/udaconnect-location-api:2912 -f ./api/Dockerfile .
-docker push hoanhtung/udaconnect-location-api:2912
-kubectl apply -f ./location-api/deployment.yaml
 ```
 - `location-service`:
 ```

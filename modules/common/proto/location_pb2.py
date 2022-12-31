@@ -13,7 +13,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0elocation.proto\"l\n\x0fLocationMessage\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x11\n\tperson_id\x18\x02 \x01(\x03\x12\x11\n\tlongitude\x18\x03 \x01(\t\x12\x10\n\x08latitude\x18\x04 \x01(\t\x12\x15\n\rcreation_time\x18\x05 \x01(\x03\"%\n\x17RetrieveLocationRequest\x12\n\n\x02id\x18\x01 \x01(\x03\"\x07\n\x05\x45mpty2m\n\x0fLocationService\x12\"\n\x06\x43reate\x12\x10.LocationMessage\x1a\x06.Empty\x12\x36\n\x08Retrieve\x12\x18.RetrieveLocationRequest\x1a\x10.LocationMessageb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0elocation.proto\"l\n\x0fLocationMessage\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x11\n\tperson_id\x18\x02 \x01(\x03\x12\x11\n\tlongitude\x18\x03 \x01(\t\x12\x10\n\x08latitude\x18\x04 \x01(\t\x12\x15\n\rcreation_time\x18\x05 \x01(\t\"%\n\x17RetrieveLocationRequest\x12\n\n\x02id\x18\x01 \x01(\x03\"\x07\n\x05\x45mpty2m\n\x0fLocationService\x12\"\n\x06\x43reate\x12\x10.LocationMessage\x1a\x06.Empty\x12\x36\n\x08Retrieve\x12\x18.RetrieveLocationRequest\x1a\x10.LocationMessageb\x06proto3')
 
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, globals())
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'location_pb2', globals())

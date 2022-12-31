@@ -5,7 +5,7 @@ message LocationMessage {
   int64 person_id = 2;
   string longitude = 3;
   string latitude = 4;
-  int64 creation_time = 5;
+  string creation_time = 5;
 }
 
 message RetrieveLocationRequest {
@@ -14,7 +14,6 @@ message RetrieveLocationRequest {
 
 message Empty {
 }
-
 
 service LocationService {
   rpc Create(LocationMessage) returns (Empty);
