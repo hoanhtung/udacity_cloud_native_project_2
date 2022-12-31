@@ -6,4 +6,4 @@ Use proto file:
 - After generating, you can see the files like *_pb2.py, *_pb2_grpc.py (here is Location)
 - And then, you can use resource from the files to import into gRPC service
 
-* Can use BloomRPC tool to test gRPC endpoints
+* Can use BloomRPC tool to test gRPC endpoints or run file `python write.py` in location-service folder

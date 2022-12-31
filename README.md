@@ -63,12 +63,6 @@ docker push hoanhtung/location-consumer-service:2912
 kubectl apply -f ./location-consumer-service/deployment.yaml
 ```
 
-
-These pages should also load on your web browser:
-* `http://localhost:30001/` - OpenAPI Documentation
-* `http://localhost:30001/api/` - Base path for API
-* `http://localhost:30000/` - Frontend ReactJS Application
-
 ## PostgreSQL Database
 The database uses a plug-in named PostGIS that supports geographic queries. It introduces `GEOMETRY` types and functions that we leverage to calculate distance between `ST_POINT`'s which represent latitude and longitude.
 

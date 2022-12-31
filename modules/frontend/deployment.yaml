@@ -31,7 +31,7 @@ spec:
         service: udaconnect-app
     spec:
       containers:
-      - image: hoanhtung/udaconnect-app:3012
+      - image: hoanhtung/udaconnect-app:0101
         name: udaconnect-app
         imagePullPolicy: Always
         resources:

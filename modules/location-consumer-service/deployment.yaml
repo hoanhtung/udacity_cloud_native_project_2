@@ -15,7 +15,7 @@ spec:
         service: location-consumer-service
     spec:
       containers:
-      - image: hoanhtung/location-consumer-service:2912-2
+      - image: hoanhtung/location-consumer-service:0101
         name: location-consumer-service
         env:
         - name: DB_USERNAME
