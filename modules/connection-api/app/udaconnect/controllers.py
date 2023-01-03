@@ -16,7 +16,6 @@ DATE_FORMAT = "%Y-%m-%d"
 api = Namespace("UdaConnect", description="Connections via geolocation.")  # noqa
 
 
-# TODO: This needs better exception handling
 def handle_exception(e):
     print(e)
     return Response("Whoops something went wrong on our servers!", status=500)
